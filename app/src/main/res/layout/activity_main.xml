@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--18 April 2022-->
+<!--10119197-->
+<!--Mochamad Nurkhayal Kadafi-->
+<!--IF-5-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/background"
+    android:contentDescription="@string/scroll_view"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/colorLightGreen"
+            app:cardCornerRadius="@dimen/delapandp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivCompanyLogo"
+                    android:layout_width="@dimen/empatdelapandp"
+                    android:layout_height="@dimen/empatdelapandp"
+                    android:layout_marginStart="24dp"
+                    android:contentDescription="@string/logo_company"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/tvTitleCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    style="@style/TextTitleRobotoMedium16Black"
+                    android:text="@string/company_name"
+                    app:layout_constraintStart_toEndOf="@+id/ivCompanyLogo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCompanyMoto"
+                    style="@style/TextLatoRegular12Gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/company_moto"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvTitleCompany"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleCompany" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUserAvatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/foto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCompany" />
+
+        <TextView
+            android:id="@+id/tvTitleUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            style="@style/TextTitleRobotoMedium16Black"
+            android:text="@string/user_full_name"
+            app:layout_constraintStart_toEndOf="@+id/ivUserAvatar"
+            app:layout_constraintTop_toTopOf="@+id/ivUserAvatar" />
+
+        <TextView
+            android:id="@+id/tvUserRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            style="@style/TextRobotoRegular14"
+            android:text="@string/user_role"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleUser"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleUser" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCheckin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="@dimen/delapandp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserRole" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTitleWorkingHours"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    style="@style/TextRobotoMedium20"
+                    android:text="@string/title_working_hours"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTitleWorkingHoursWithValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    style="@style/TextRobotoMedium14Blue"
+                    android:text="@string/user_working_hours"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleWorkingHours" />
+
+                <TextView
+                    android:id="@+id/tvWorkingHour"
+                    style="@style/TextRobotoBold20White"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/shape_dark_green_clock"
+                    android:padding="8dp"
+                    android:text="@string/user_working_hour"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+                <ImageView
+                    android:id="@+id/ivClockIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_green_clock"
+                    android:contentDescription="@string/clock_icon"
+                    android:padding="3dp"
+                    android:scaleType="fitEnd"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvWorkingHour"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3"
+                    app:srcCompat="@drawable/clock" />
+
+                <TextView
+                    android:id="@+id/tvMinimumWorkingHour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    style="@style/TextLatoRegular12Gray"
+                    android:text="@string/title_minimum_working_hours"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvWorkingHour" />
+
+                <Button
+                    android:id="@+id/btnCheckIn"
+                    style="@style/Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/check_in"
+                    app:backgroundTint="@color/colorGreenButton"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMinimumWorkingHour" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="86dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="133dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="244dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCalendarReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCheckin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTitleYourReport"
+                    style="@style/TextRobotoMedium20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/title_user_report"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvFirstMonth"
+                    style="@style/TextRobotoMedium16Green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/month_march"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleYourReport" />
+
+                <Button
+                    android:id="@+id/btnCreateReport"
+                    style="@style/Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/create_report"
+                    app:backgroundTint="@color/colorGreenButton"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSecondMonth"
+                    style="@style/TextRobotoMedium16Green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month_april"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvFirstMonth"
+                    app:layout_constraintStart_toStartOf="@+id/glSecondMonth"
+                    app:layout_constraintTop_toTopOf="@+id/tvFirstMonth" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/glSecondMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/glFirstMonth"
+                    app:layout_constraintTop_toTopOf="@+id/glFirstMonth">
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo3"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo4"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo5"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo6"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="0"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo7"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="1"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo8"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green"
+                        app:layout_column="2"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo9"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="3"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo10"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="4"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo11"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_bb3"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo12"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo13"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo14"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="3"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo15"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="4"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo16"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="0"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo17"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="1"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo18"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="2"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo19"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="3"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo20"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="4"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo21"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green"
+                        app:layout_column="0"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo22"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="1"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo23"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="2"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo24"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="3"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo25"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="0"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo26"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="4"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo27"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="1"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo28"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="2"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo29"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="3"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthTwo30"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_gray"
+                        app:layout_column="4"
+                        app:layout_row="5" />
+
+                </androidx.gridlayout.widget.GridLayout>
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/glFirstMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnCreateReport"
+                    app:layout_constraintStart_toStartOf="@+id/tvFirstMonth"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFirstMonth">
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="0"
+                        app:layout_row="0" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne3"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="2"
+                        app:layout_row="0" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne4"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="3"
+                        app:layout_row="0" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne5"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="4"
+                        app:layout_row="0" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne6"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="0"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne7"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_767"
+                        app:layout_column="1"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne8"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="2"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne9"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_d94"
+                        app:layout_column="3"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne10"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="4"
+                        app:layout_row="1" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne11"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne12"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne13"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="3"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne14"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_9d0"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne15"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_9d0"
+                        app:layout_column="4"
+                        app:layout_row="2" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne16"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="0"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne17"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_767"
+                        app:layout_column="1"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne19"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_9d0"
+                        app:layout_column="2"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne18"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_bb3"
+                        app:layout_column="3"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne20"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="4"
+                        app:layout_row="3" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne21"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_bb3"
+                        app:layout_column="0"
+                        app:layout_row="4"
+                        tools:ignore="TooManyViews" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne22"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_bb3"
+                        app:layout_column="1"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne23"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_bb3"
+                        app:layout_column="2"
+                        app:layout_row="4"
+                        tools:ignore="TooManyViews" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne24"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="3"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne25"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="4"
+                        app:layout_row="4" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne26"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_dark_green"
+                        app:layout_column="0"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne27"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="1"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne28"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="2"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne29"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_75c"
+                        app:layout_column="3"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne30"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_bb3"
+                        app:layout_column="4"
+                        app:layout_row="5" />
+
+                    <ImageView
+                        android:id="@+id/squareMonthOne31"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="1dp"
+                        android:contentDescription="@string/daily_report"
+                        android:src="@drawable/shape_report_green_bb3"
+                        app:layout_column="0"
+                        app:layout_row="6" />
+
+                </androidx.gridlayout.widget.GridLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivPermission"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/permission"
+            android:src="@drawable/permission"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCalendarReport" />
+
+        <ImageView
+            android:id="@+id/ivAttendance"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/attendance"
+            android:src="@drawable/attendance"
+            app:layout_constraintEnd_toStartOf="@+id/ivReport"
+            app:layout_constraintStart_toEndOf="@+id/ivPermission"
+            app:layout_constraintTop_toBottomOf="@+id/cvCalendarReport" />
+
+        <ImageView
+            android:id="@+id/ivReport"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:contentDescription="@string/report"
+            android:src="@drawable/book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCalendarReport"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvAttendance"
+            style="@style/TextRobotoRegular14Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/attendance"
+            app:layout_constraintEnd_toEndOf="@+id/ivAttendance"
+            app:layout_constraintStart_toStartOf="@+id/ivAttendance"
+            app:layout_constraintTop_toBottomOf="@+id/ivAttendance" />
+
+        <TextView
+            android:id="@+id/tvPermission"
+            style="@style/TextRobotoRegular14Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/permission"
+            app:layout_constraintEnd_toEndOf="@+id/ivPermission"
+            app:layout_constraintStart_toStartOf="@+id/ivPermission"
+            app:layout_constraintTop_toBottomOf="@+id/ivPermission" />
+
+        <TextView
+            android:id="@+id/tvReport"
+            style="@style/TextRobotoRegular14Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/report"
+            android:text="@string/report"
+            app:layout_constraintEnd_toEndOf="@+id/ivReport"
+            app:layout_constraintStart_toStartOf="@+id/ivReport"
+            app:layout_constraintTop_toBottomOf="@+id/ivReport" />
+
+        <ImageView
+            android:id="@+id/ivAgenda"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/agenda"
+            app:layout_constraintEnd_toEndOf="@+id/ivPermission"
+            app:layout_constraintStart_toStartOf="@+id/ivPermission"
+            app:layout_constraintTop_toBottomOf="@+id/tvPermission"
+            app:srcCompat="@drawable/agenda" />
+
+        <TextView
+            android:id="@+id/tvAgenda"
+            style="@style/TextRobotoRegular14Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/agenda"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivAgenda"
+            app:layout_constraintStart_toStartOf="@+id/ivAgenda"
+            app:layout_constraintTop_toBottomOf="@+id/ivAgenda" />
+
+        <ImageView
+            android:id="@+id/ivWiki"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/wiki"
+            app:layout_constraintEnd_toEndOf="@+id/ivReport"
+            app:layout_constraintStart_toStartOf="@+id/ivReport"
+            app:layout_constraintTop_toBottomOf="@+id/tvReport"
+            app:srcCompat="@drawable/wiki" />
+
+        <TextView
+            android:id="@+id/tvWiki"
+            style="@style/TextRobotoRegular14Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/wiki"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivWiki"
+            app:layout_constraintStart_toStartOf="@+id/ivWiki"
+            app:layout_constraintTop_toBottomOf="@+id/ivWiki" />
+
+        <ImageView
+            android:id="@+id/ivBooking"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/booking"
+            app:layout_constraintEnd_toEndOf="@+id/ivAttendance"
+            app:layout_constraintStart_toStartOf="@+id/ivAttendance"
+            app:layout_constraintTop_toBottomOf="@+id/tvAttendance"
+            app:srcCompat="@drawable/book" />
+
+        <TextView
+            android:id="@+id/tvBooking"
+            style="@style/TextRobotoRegular14Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/booking"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivBooking"
+            app:layout_constraintStart_toStartOf="@+id/ivBooking"
+            app:layout_constraintTop_toBottomOf="@+id/ivBooking" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

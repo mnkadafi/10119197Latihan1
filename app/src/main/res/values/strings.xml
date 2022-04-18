@@ -1,0 +1,32 @@
+
+<!--18 April 2022-->
+<!--10119197-->
+<!--Mochamad Nurkhayal Kadafi-->
+<!--IF-5-->
+
+<resources>
+    <string name="app_name">10119197Latihan1</string>
+    <string name="scroll_view">Scroll View</string>
+    <string name="logo_company">Logo Company</string>
+    <string name="company_name">DigiTeam</string>
+    <string name="company_moto">Digital Together Everyone Archive More \nJabar Digital Service</string>
+    <string name="user_full_name">Dias Eka Fredianto, S.Kom, B.IT</string>
+    <string name="user_role">UI Designer</string>
+    <string name="title_working_hours">Jam Kerja Bulan ini</string>
+    <string name="user_working_hours">Jam kerja kamu bulan ini: 130.53 Jam</string>
+    <string name="user_working_hour">130.53 JAM</string>
+    <string name="title_minimum_working_hours">Batas Minimum Jam Kerja 170 jam/bulan</string>
+    <string name="check_in">Checkin</string>
+    <string name="title_user_report">Laporan Kamu</string>
+    <string name="clock_icon">Clock Icon</string>
+    <string name="month_march">Maret</string>
+    <string name="create_report">Buat Laporan</string>
+    <string name="month_april">April</string>
+    <string name="daily_report">Daily Report</string>
+    <string name="attendance">Kehadiran</string>
+    <string name="permission">Izin</string>
+    <string name="report">Laporan</string>
+    <string name="agenda">Agenda</string>
+    <string name="wiki">Wiki</string>
+    <string name="booking">Booking</string>
+</resources>
